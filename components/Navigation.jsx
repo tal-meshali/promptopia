@@ -36,6 +36,9 @@ const Navigation = () => {
                         <Link href="/create-prompt" className="black_btn">
                             Create Post
                         </Link>
+                        <Link href="/upload-docs" className="black_btn">
+                            Upload Files
+                        </Link>
                         <button
                             type="button"
                             className="outline_btn"
@@ -94,6 +97,13 @@ const Navigation = () => {
                                     onClick={() => setToggleDropDown(false)}
                                 >
                                     Create Prompt
+                                </Link>
+                                <Link
+                                    href="/upload-docs"
+                                    className="dropdown_link"
+                                    onClick={() => setToggleDropDown(false)}
+                                >
+                                    Upload Files
                                 </Link>
                                 <button
                                     type="button"

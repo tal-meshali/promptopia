@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import DropZone from './DropZone'
 
 const Form = ({ type, submit, handleSubmit, post, setPost }) => {
     return (
@@ -42,20 +43,24 @@ const Form = ({ type, submit, handleSubmit, post, setPost }) => {
                             setPost({ ...post, tag: e.target.value })
                         }
                         placeholder="#trendy_af"
-                        required 
+                        required
                         className="form_input"
                     />
                 </label>
-                <div className='flex-end mx-3 mb-5 gap-4'>
-                    <Link href="/" className='text-gray-500 text-sm'>
-                    Cancel
+                <div className="flex-end mx-3 mb-5 gap-4">
+                    <Link href="/" className="text-gray-500 text-sm">
+                        Cancel
                     </Link>
                     <button
-                    type='submit'
-                    disabled={submit}
-                    className='px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white'
+                        type="submit"
+                        disabled={submit}
+                        className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
                     >
-                        {submit ? `${type[-1] === 'e' ? type.slice(0,-1) : type}ing...` : `${type}`}
+                        {submit
+                            ? `${
+                                  type[-1] === 'e' ? type.slice(0, -1) : type
+                              }ing...`
+                            : `${type}`}
                     </button>
                 </div>
             </form>
